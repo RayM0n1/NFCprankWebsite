@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>BAD TO THE BONE</title>
   <style>
     /* Styl ogólny */
@@ -61,7 +61,7 @@
     const btn = document.getElementById('playButton');
     const audio = document.getElementById('audio');
 
-    btn.addEventListener('dblclick', () => {
+    btn.addEventListener('click', () => {
       audio.volume = 1.0; // max głośność
       audio.currentTime = 0; // zaczynaj od początku
       audio.play();
