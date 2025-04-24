@@ -2,8 +2,10 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BAD TO THE BONE</title>
   <style>
+    /* Styl ogólny */
     body {
       margin: 0;
       height: 100vh;
@@ -13,8 +15,10 @@
       justify-content: center;
       align-items: center;
       font-family: 'Courier New', monospace;
+      padding: 10px;
     }
 
+    /* Styl przycisku */
     button {
       font-size: 2rem;
       padding: 1em 2em;
@@ -31,6 +35,18 @@
       background-color: #00cccc;
       box-shadow: 0 0 30px #0ff;
     }
+
+    /* Styl dla małych ekranów (telefony) */
+    @media (max-width: 600px) {
+      button {
+        font-size: 1.5rem; /* mniejszy tekst na telefonach */
+        padding: 0.8em 1.5em; /* mniejsze przyciski */
+      }
+
+      body {
+        flex-direction: column; /* Ustawienie przycisku i tła w pionie */
+      }
+    }
   </style>
 </head>
 <body>
@@ -46,8 +62,8 @@
     const audio = document.getElementById('audio');
 
     btn.addEventListener('dblclick', () => {
-      audio.volume = 1.0; // max
-      audio.currentTime = 0;
+      audio.volume = 1.0; // max głośność
+      audio.currentTime = 0; // zaczynaj od początku
       audio.play();
     });
   </script>
